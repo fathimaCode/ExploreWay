@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "897725500517",
+    "project_id": "explore-way",
+    "storage_bucket": "explore-way.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:897725500517:android:1ff5396b5c347490fa8a8c",
+        "android_client_info": {
+          "package_name": "com.exploreway"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACOwVeaERTitfOFXqK0Lppu5jh1ZDByW0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
