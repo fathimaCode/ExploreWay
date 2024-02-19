@@ -59,7 +59,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
+                android:id="@+id/textInputLayout"
                 app:hintEnabled="true"
                 app:hintAnimationEnabled="true"
                 app:hintTextAppearance="@style/TextAppearance.MaterialComponents.Caption"
@@ -68,6 +68,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/textInputEditText"
                     android:hint="Username" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -83,7 +84,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
+                android:id="@+id/email"
                 app:hintEnabled="true"
                 app:hintAnimationEnabled="true"
                 app:hintTextAppearance="@style/TextAppearance.MaterialComponents.Caption"
@@ -109,7 +110,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
+                android:id="@+id/pwd"
                 app:endIconMode="password_toggle"
                 app:passwordToggleEnabled="true">
 
@@ -122,7 +123,7 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
-                android:id="@+id/pwd"
+                android:id="@+id/cpwd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
@@ -133,7 +134,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
+                android:id="@+id/confirmPwd"
                 app:endIconMode="password_toggle"
                 app:passwordToggleEnabled="true">
 
@@ -148,7 +149,7 @@
 
 
             <Button
-                android:id="@+id/loginButton"
+                android:id="@+id/accountBtn"
                 style="@style/exploreButton"
                 android:layout_width="350dp"
                 android:layout_height="wrap_content"
@@ -160,7 +161,7 @@
 
             <TextView
                 android:id="@+id/account"
-                android:layout_width="wrap_content"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:textColor="@color/main"

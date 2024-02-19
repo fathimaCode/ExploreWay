@@ -15,4 +15,8 @@
     <string name="newaccount">Need to Create an Account</string>
     <string name="already_account">Already have an Account</string>
     <string name="account_title">Sign up for the Explore ways app</string>
+    <string name="title_activity_user_dashboard">userDashboardActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
 </resources>

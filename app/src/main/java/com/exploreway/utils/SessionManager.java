@@ -6,6 +6,8 @@ import android.content.SharedPreferences;
 public class SessionManager {
     private static final String PREF_NAME = "ExploreWaySession";
     private static final String KEY_SELECTED_LOCATION = "selectedLocation";
+    private static final String KEY_USERNAME = "username";
+    private static final String KEY_USERID = "userid";
 
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
@@ -30,5 +32,23 @@ public class SessionManager {
 
     public String getSelectedLocation() {
         return sharedPreferences.getString(KEY_SELECTED_LOCATION, "");
+    }
+
+    public void setUsername(String username) {
+        editor.putString(KEY_USERNAME, username);
+        editor.apply();
+    }
+
+    public String getUsername() {
+        return sharedPreferences.getString(KEY_USERNAME, "");
+    }
+
+    public void setUserId(String userId) {
+        editor.putString(KEY_USERID, userId);
+        editor.apply();
+    }
+
+    public String getUserId() {
+        return sharedPreferences.getString(KEY_USERID, "");
     }
 }

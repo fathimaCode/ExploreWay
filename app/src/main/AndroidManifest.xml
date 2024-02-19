@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +14,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ExploreWay"
         tools:targetApi="31">
+        <activity
+            android:name=".userDashboardActivity"
+            android:exported="false"
+            android:label="@string/title_activity_user_dashboard" />
+        <activity
+            android:name=".ForgetPassword"
+            android:exported="false" />
+        <activity
+            android:name=".DashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AuthorisedActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false" />
         <activity
             android:name=".AccountActivity"
             android:exported="false" />
