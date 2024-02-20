@@ -28,6 +28,7 @@ import org.json.JSONTokener;
 
 import java.io.File;
 import java.io.FileReader;
+import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.FileSystems;
 import java.nio.file.Files;
@@ -60,9 +61,16 @@ public class SearchFragment extends Fragment {
         CosineSimilarity calculateLocation = new CosineSimilarity();
         String userDirectory = System.getProperty("user.dir");
         System.out.println(userDirectory);
-        String data = new String(Files.readAllBytes(Paths.get("C:/json.txt")));
-        JsonElement jsonElement = JsonParser.parseString(data);
-        JsonObject json = jsonElement.getAsJsonObject();
+        String data = null;
+        try {
+            data = new String(Files.readAllBytes(Paths.get("C:/Users/ISI-Android/Downloads/explore-correct.json")));
+            JsonElement jsonElement = JsonParser.parseString(data);
+            JsonObject json = jsonElement.getAsJsonObject();
+            System.out.println(json);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 
 }
