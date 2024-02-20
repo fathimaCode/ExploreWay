@@ -1,7 +1,17 @@
 package com.exploreway.utils;
 
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
+
 import org.json.JSONArray;
 import org.json.JSONException;
+
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 public class CosineSimilarity {
 
@@ -27,4 +37,34 @@ public class CosineSimilarity {
 
         return dotProduct / (Math.sqrt(normA) * Math.sqrt(normB));
     }
+
+    public  JsonArray loadJsonArrayFromFile(String filePath) throws Exception {
+        // Parse the JSON file
+        JsonElement jsonElement = JsonParser.parseReader(new FileReader(filePath));
+        JsonObject jsonObject = jsonElement.getAsJsonObject();
+
+        // Get the "locations" object
+        JsonObject locations = jsonObject.getAsJsonObject("locations");
+
+        // Create a list to hold all JSON objects
+        List<JsonObject> jsonObjectList = new ArrayList<>();
+
+        // Iterate over each location
+        for (Map.Entry<String, JsonElement> entry : locations.entrySet()) {
+            JsonArray locationArray = entry.getValue().getAsJsonArray();
+            // Add each element of the location array to the list
+            for (JsonElement element : locationArray) {
+                jsonObjectList.add(element.getAsJsonObject());
+            }
+        }
+
+        // Convert list of JSON objects to JSON array
+        JsonArray jsonArray = new JsonArray();
+        for (JsonObject obj : jsonObjectList) {
+            jsonArray.add(obj);
+        }
+
+        return jsonArray;
+    }
+
 }
